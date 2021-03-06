@@ -1,0 +1,30 @@
+.ly_cont {
+    width: 1230px;
+    padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.ly_company { 
+    width: 930px;
+}
+
+.bl_company_ttl {
+
+}
+
+.bl_company_txt {
+    
+}
+
+.bl_company_img { 
+}
+
+.bl_company_system {
+
+}
+
+.bl_company_system_box {
+    
+}

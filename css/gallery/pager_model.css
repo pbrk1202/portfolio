@@ -1,0 +1,49 @@
+
+/* pager*/
+.bl_pager {
+    max-width: 1230px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 55px 15px;
+}
+
+/* page */
+.bl_pager_box {
+    display: flex;
+    overflow-x: auto;
+}
+.bl_pager_inner {
+    display:flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+.bl_pager_inner > *:last-child {
+    margin-right: 0;
+}
+.bl_pager_inner > li {
+    margin-right: 15px;
+}
+.bl_pager_link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    color: #2d5b79;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    border-color: #ddd;
+    align-items: center;
+    justify-content: center;
+    transition: .25s;
+}
+.bl_pager_link:focus,
+.bl_pager_link:hover {
+    color: #2d5b79;
+    background-color: #ddd;
+    opacity: .75;
+}
+.bl_pager_link.is_active {
+    color: #2d5b79;
+    background-color: #ddd;
+    pointer-events: none;
+}

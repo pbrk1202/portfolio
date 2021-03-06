@@ -1,0 +1,113 @@
+    
+    <div class="ly_header">
+
+        <div class="bl_header_lnb_background"></div>
+        <div class="bl_header_inner">
+            <div class="bl_header_utils">
+                <a class="bl_header_logo" href="../index.html"><img src="../img/logo_114x45.png" alt="로고"></a>
+            </div>
+            <nav>
+                <ul class="bl_header_nav">
+                    <li class="bl_header_gnb">
+                        <a class="bl_header_gnb_link" href="#">제품정보</a>
+                        <ul class="bl_header_lnb">
+                            <li><a class="bl_header_lnb_link" href="../product/prd01.html">바닥제</a></li>
+                            <li><a class="bl_header_lnb_link" href="../product/prd01.html">벽면재</a></li>
+                            <li><a class="bl_header_lnb_link" href="../product/prd01.html">도어재</a></li>
+                            <li><a class="bl_header_lnb_link" href="../product/prd01.html">몰딩재</a></li>
+                            <li><a class="bl_header_lnb_link" href="../product/prd01.html">시트재</a></li>
+                            <li><a class="bl_header_lnb_link" href="../product/prd01.html">가구재</a></li>
+                        </ul>
+                    </li>
+                    <li class="bl_header_gnb bl_header_gnb__top">
+                        <a class="bl_header_gnb_link" href="#">시공사례</a>
+                        <ul class="bl_header_lnb">
+                            <li><a class="bl_header_lnb_link" href="../gallery/gallery01.html">테마 갤러리</a></li>
+                            <li><a class="bl_header_lnb_link" href="../gallery/gallery01.html">시공 갤러리</a></li>
+                            <li><a class="bl_header_lnb_link" href="../gallery/gallery01.html">전시장 갤러리</a></li>
+                        </ul>
+                    </li>
+                    <li class="bl_header_gnb bl_header_gnb__top">
+                        <a class="bl_header_gnb_link" href="#">고객센터</a>
+                        <ul class="bl_header_lnb">  
+                            <li><a class="bl_header_lnb_link" href="../customer/customer01.html">고객상담</a></li>
+                            <li><a class="bl_header_lnb_link" href="../customer/customer02.html">대리점 찾기</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">FAQ</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">공지</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">뉴스</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">자료실</a></li>   
+                        </ul>
+                    </li>
+                    <li class="bl_header_gnb bl_header_gnb__top">
+                        <a class="bl_header_gnb_link" href="#">기업소개</a>
+                        <ul class="bl_header_lnb">
+                            <li><a class="bl_header_lnb_link" href="#">회사개요</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">투자정보</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">인사제도</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">채용공고</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">네트워크</a></li>
+                        </ul>
+                    </li>
+                    <li class="bl_header_gnb bl_header_gnb__top">
+                        <a class="bl_header_gnb_link" href="#">지속가능경영</a>
+                        <ul class="bl_header_lnb">
+                            <li><a class="bl_header_lnb_link" href="#">환경경영</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">윤리경영</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">사회공헌</a></li>
+                        </ul>
+                    </li>
+                    <li class="bl_header_gnb bl_header_gnb__top">
+                        <a class="bl_header_gnb_link" href="#">사업분야</a>
+                        <ul class="bl_header_lnb">
+                            <li><a class="bl_header_lnb_link" href="#">가구 컴포넌트</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">환경경영</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">인테리어 자재</a></li>
+                            <li><a class="bl_header_lnb_link" href="#">연관사업 자재</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav>
+                <ul class="bl_header_nav_service">
+                    <li><a class="bl_header_nav_service_link" href="#">제품찾기</a></li>
+                    <li><a class="bl_header_nav_service_link" href="#">SITMAP</a></li>
+                    <li><a class="bl_header_nav_service_link" href="#">BLOG</a></li>
+                </ul>
+            </nav>
+            <div class="bl_header_nav_service_mobile">
+                <a class="bl_header_nav_service_icon" href="#">서비스 목록 아이콘</a>
+            </div>
+        </div> 
+        <!-- /.bl_header_inner --> 
+    </div>
+    <!-- /.ly_header -->
+
+    <script>
+
+        let headerGnbLink = $('.bl_header_gnb_link'); //헤더 메뉴
+        let headerLnb = $('.bl_header_lnb'); //헤더 지역 제목
+        let headerLnbBg = $('.bl_header_lnb_background'); //헤더 지역 배경
+
+        //헤더 메뉴 클릭
+        headerGnbLink.click(function(){
+
+            if($(this).hasClass('is_active') === true) {
+                headerLnb.removeClass('is_active');
+                headerLnbBg.removeClass('is_active');
+
+                $(this).removeClass('is_active');
+            } else {
+
+                if(headerGnbLink.hasClass('is_active') === true) {
+                    headerGnbLink.removeClass('is_active');
+                } else {
+                    headerLnb.addClass('is_active');
+                    headerLnbBg.addClass('is_active');
+                }
+
+                $(this).addClass('is_active');
+            }
+
+        });
+
+    </script>

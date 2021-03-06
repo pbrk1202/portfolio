@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfolio</title>
+    
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- reset -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
+    
+    <!-- header -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header_index.css'>
+    
+    <!-- slide -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/banner_model.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/swiper_model.css'>
+
+    <!-- section -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/product_icon_model.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/magazine_model.css'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/media_model.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/card_model.css'>
+
+    <!-- footer -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/footer_index.css'>
+</head>
+<body>
+    
+    <!-- header -->
+    <!-- z-index / inner : 101; bg : 101 -->    
+    <header role="header" data-include="header_index.html"></header> 
+
+    <!-- section -->
+    <section role="banner" data-include="banner_model.html"></section>
+    <section role="product_icon" data-include="product_icon_model.html"></section>    
+    <section role="magazine" data-include="magazine_model.html"></section>
+
+    <section role="media" data-include="media_model.html"></section>
+    <!-- z-index / ly_cont : 99 -->
+    <section role="section" data-include="card_model.html"></section> 
+
+    <!-- footer -->
+    <footer role="footer" data-include="footer_index.html"></footer> 
+
+    <!-- script -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/plugin/swiper.js"></script> 
+
+    <script>
+        $(function(){ 
+            includeLayout(); 
+        }); 
+
+        function includeLayout(){ 
+            var includeArea = $('[data-include]'); 
+            var self, url; 
+            $.each(includeArea, function() { 
+                self = $(this); 
+                url = self.data("include"); 
+                self.load(url, function() { 
+                    self.removeAttr("data-include"); 
+                }); 
+            }); 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>prd01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/reset.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/header_index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/headerSub_index.css'>  
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/product/pro01_jumbotron.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/product/prd01_model.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/footer_index.css'>
+</head>
+<body>
+
+    <!-- header -->
+    <header role="header" data-include="../header_index.html"></header> 
+    <section role="headerSub" data-include="../headerSub_index.html"></section>
+
+    <!-- section -->
+    <section role="jumbotron" data-include="prd01_jumbotron.html"></section>
+    <section role="section" data-include="prd01_model.html"></section> 
+
+    <!-- footer -->
+    <footer role="footer" data-include="../footer_index.html"></footer> 
+
+    <script src="../js/jquery.min_1.12.4.js"></script>
+    
+    <script>
+
+        $(function(){ 
+            includeLayout(); 
+        }); 
+        
+        function includeLayout(){ 
+            var includeArea = $('[data-include]'); 
+            var self, url; 
+            $.each(includeArea, function() { 
+                self = $(this); 
+                url = self.data("include"); 
+                self.load(url, function() { 
+                    self.removeAttr("data-include"); 
+                }); 
+            }); 
+        }
+
+    </script>
+</body>
+</html>
