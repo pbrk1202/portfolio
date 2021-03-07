@@ -44,7 +44,7 @@
     position: relative;
     padding: 15px 15px;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .bl_footer_item::after {
     content: '';
@@ -172,17 +172,32 @@
 
 @media screen and (max-width: 768px) {
 
-    /* footer_item */
+    /* 모바일 화면에서 네비게이션 구조 변경 */
+    .bl_footer_fnb {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 0.7rem;
+    }
+    .bl_footer_fnb_item {
+        display: block;
+        padding: 5px 10px;
+
+    }
+
+    .bl_footer_utils,
+    .bl_footer_box,
+    .el_footerCopyright {
+        text-align: left;
+        padding-left: 30px;
+    }
     .bl_footer_item {
-        padding: 5px 5px;
-        font-size: 0.8rem;
+        display: block;
+        padding: 1px 0;
+        font-size: 0.5rem;
     }
-    .bl_footer_item:nth-child(5)::after {
-        display: none;
-    }    
-    .bl_footer_item:nth-child(6),
-    .bl_footer_item:nth-child(7){
-        display: none;
+    .el_footerCopyright {
+        font-size: 0.7rem;
     }
-    
+
 }

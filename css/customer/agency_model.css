@@ -11,19 +11,19 @@
     display: flex;
     position: relative;
     left: 50%;
-    width: 1200px;
+    width: 100%;
     justify-content: center;
     transform: translateX(-50%);
 }
 .bl_agency_txt {
     position: absolute;
-    left: 35%;
+    left: 0;
     font-size: 0.8rem;    
-    transform: translateX(-50%);
 }
 
 /* agency_list */
 .bl_agency_list {
+    width: 50%;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -81,7 +81,7 @@
 
 /* agency_map */
 .bl_agency_map {
-    width: 500px;
+    width: 50%;
     height: 500px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -102,5 +102,9 @@
 
     .bl_agency_list {
         display: none;
+    }
+
+    .bl_agency_map {
+        width: 100%;
     }
 }

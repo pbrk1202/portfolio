@@ -118,29 +118,30 @@
     width: 100%;
     text-align: center;
 }
-.slide_02 .prev_02,
-.slide_02 .next_02 {
+.slide_02 .prev_02 {
     display: inline-block;
     position: absolute;
     top: 40%;
+    left: 62px;
     width: 25px;
     height: 47px;
     color: transparent;
     transform: translateY(-50%);
-    background: url(../img/sp_com.png) no-repeat;
+    background: url(../img/icon_left.png) no-repeat;
     z-index: 2;
 }
-.slide_02 .prev_02 {
-    left: 62px;
-    right: auto;
-    background-position: -128px -60px;
-}
 .slide_02 .next_02 {
+    display: inline-block;
+    position: absolute;
+    top: 40%;
     right: 62px;
-    left: auto;
-    background-position: -158px -60px;
+    width: 25px;
+    height: 47px;
+    color: transparent;
+    transform: translateY(-50%);
+    background: url(../img/icon_right.png) no-repeat;
+    z-index: 2;
 }
-
 
 /* swiper */
 .swiper-container_02 {

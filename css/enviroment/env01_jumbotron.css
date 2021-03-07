@@ -22,14 +22,20 @@
 }
 .bl_jumbotron_txt {
     position: relative;
-    top: 50%;
-    height: 170px;
-    justify-content: center;
-    transform: translateY(-50%);
-    background: url(../../img/comp0101_img01.png) no-repeat;
-    background-position: center center;
-    background-size: cover;
+    top: 40%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
 }
+.bl_jumbotron_txt > h2 {
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.bl_jumbotron_txt > span {
+    font-size: 1.1rem;
+}
+
 
 
 @media screen and (max-width: 768px) {
