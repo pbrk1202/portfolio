@@ -1,0 +1,43 @@
+.bl_business {
+    width: 1230px;
+    padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.bl_business_inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.bl_business_box {
+    width: 100%;
+}
+
+.bl_business_box > img {
+    display: block;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.bl_business_ttl {
+    padding: 15px;
+    color: #fff;
+    background: #2d5b79;
+;
+
+}
+.bl_business_ttl > p {
+    width: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.bl_business_txt {
+    position: relative;
+    width: 1000px;
+    padding: 15px 0;
+    margin: 0 auto;
+}
