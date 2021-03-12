@@ -1,0 +1,136 @@
+
+/* magazine */
+.magazine-wrapper {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #dfd9d1;
+}
+.magazine-tit {
+    padding: 50px 0 16px;
+    color: #000;
+    text-align: center;
+    font-size: 28px;
+}
+.magazine-txt {
+    padding-bottom: 30px;
+    color: #3a3b36;
+    text-align: center;
+    font-size: 14px;
+}
+.magazine-utils {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 75%;
+}
+.magazine--img {
+    width: 100%;
+    height: 430px;
+} 
+
+.magazine-snbNav {
+    float: right;
+    padding: 20px;
+    width: 25%;
+    height: 430px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.magazine-snbNav-content {
+    padding: 0 0 20px;
+}
+.magazine-snbNav-link {
+    display: table;
+    width: 100%;
+    text-decoration: none;
+}
+.magazine-snbNav-utils {
+    display: table-cell;
+    position: relative;
+    padding: 0 0 0 100px;
+    height: 82px;
+    color: #333;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.magazine-snbNav-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.magazine-snbNav-txt {
+    display: block;
+    font-size: 13px;
+    color: #000;
+}
+
+/* slide2 */
+.slide_02 .swiper-pagination_02 {
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+}
+
+.swiper-pagination_02 {
+    position: relative;
+    top: -40px;
+    text-align: center;
+}
+
+/* swiper */
+.swiper-container_02 {
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    padding-bottom: 50px;
+    overflow: hidden;
+    list-style: none;
+    z-index: 1;
+}
+
+.swiper-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-property: transform; 
+    box-sizing: content-box; 
+    z-index: 1;
+
+}
+.swiper-slide {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    /* slide */
+    .swiper-container_02 {
+        width: 100%;
+    }
+
+    /* magzine */
+    .magazine-wrappere {
+        width: 100%;
+    }
+    .magazine-snbNav {
+        display: none;
+    }
+    .magazine-utils {
+        width: 100%;
+    }
+    
+    .magazine--img {
+        height: 350px;
+    }
+    
+
+}

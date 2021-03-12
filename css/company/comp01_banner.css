@@ -1,0 +1,55 @@
+
+/* company-banner */
+.company-banner-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.company-banner-container {
+    height: 700px;
+    background: url(../../img/bg_comp0101.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.company-banner-content {
+    position: relative;
+    max-width: 1230px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.company-banner-txt {
+    position: relative;
+    top: 50%;
+    height: 170px;
+    justify-content: center;
+    transform: translateY(-50%);
+    background: url(../../img/comp0101_img01.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* 글씨 숨김 */
+.is_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .company-banner-container {
+        height: 500px;
+    }
+
+    .company-banner-txt {
+        top: 70%
+    }    
+
+}

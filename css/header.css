@@ -1,0 +1,246 @@
+
+/* header */
+.header-wrapper {
+    padding-top: 20px;
+    padding-bottom: 66px;
+}
+
+/* lnbNav-background*/ 
+.header-lnbNav-background {
+    display: none;
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    height: 222px;
+    background-color: #2d5b79;
+    opacity: 0.9;
+    z-index: 101;
+}
+.header-lnbNav-background.is_active {
+    display: block;
+}
+
+.header-container {
+    position: absolute;
+    width: 100%;
+    right: 50%;
+    max-width: 1830px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translate(50%);
+    z-index: 101;
+}
+.header-utils {
+    position: absolute;
+    left:15px;
+    top:-15px;
+    padding:10px 0 0;
+}
+.header-logo {
+    /* 로고 링크 */
+}
+
+/* header-nav */
+.header-nav {
+    display: inline-block;
+    position:relative;
+    left: 50%;
+    bottom: 5px;
+    text-align: center;
+    transform: translate(-50%);
+}
+
+/* header-gnbNav */
+.header-gnbNav {
+    display: inline-block;
+}
+.header-gnbNav:last-child {
+    content: none;
+}
+
+.header-gnbNav--top {
+    vertical-align: top;
+}
+
+.header-gnbNav-link {
+    display: block;
+    position: relative;
+    padding: 15px 35px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid transparent;
+    transition: .25s;
+}
+.header-gnbNav-link::after {
+    content: none;
+}
+.header-gnbNav-link.header-gnbNav--color {
+    color: #2d5b79;
+    font-weight: bold;
+    border-bottom-color: #2d5b79;
+}
+.header-gnbNav-link.is_active {
+    display: none;
+}
+
+.header-gnbNav-link:hover {
+    color: #2d5b79;
+    border-bottom-color: #2d5b79;
+}
+
+.header-lnbNav-link:hover {
+    font-weight: bold;
+}
+
+/* header-snbNav */
+.header-snbNav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header-snbNav > li {
+    display: block;
+    position: relative;
+    float: left;
+    color: #333;
+}
+.header-snbNav > li:after {
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 7px;
+    background: #ccc;
+    transform: translateY(-50%);
+}
+.header-snbNav > li:first-child::after {
+    display: none;
+}
+.header-snbNav-link {
+    display: block;
+    padding: 11px 5px;
+    color: #333;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* header-lnbNav */
+.header-lnbNav {
+    display: none;
+    padding: 25px 0;
+
+}
+.header-lnbNav.is_active {
+    display: block;
+}
+
+
+.header-lnbNav-link {
+    display: block;
+    padding-bottom: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+/* header-snbNav-mob */
+.header-snbNav-mob {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header-snbNav__icon {
+    display: none;
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    margin-top: 10px;
+    color: transparent;
+    background: url(../img/icon/menu.png) no-repeat;
+}
+
+/* 글씨 숨김 */
+.is_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+.header-container--mob {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    
+
+    .header-wrapper {
+        border: none;
+    }
+
+    .header-nav,
+    .header-snbNav,
+    .header-gnbNav {
+        display: none;
+    }
+
+
+    .header-snbNav__icon {
+        display: inline-block;
+    }
+        
+    .header-lnbNav.is_active
+    .header-lnbNav-background.is_active {
+        display: none;
+    }
+
+    /* 모바일 메뉴 */
+    .header-container--mob {
+        display: block;
+        padding: 0 10px;
+        background: #2d5b79;
+    }
+
+    .header-container--mob.is_active {
+        display: none;
+    }
+
+    .header-gnbNav-item--mob {
+        /* padding: 15px 0; */
+        height: 50px;
+        line-height: 50px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #fff;
+    } 
+
+    .header-gnbNav-item--mob > span {
+        margin: 15px 0;
+    }
+
+    .header-gnbNav-item--mob > span > img {
+        position: relative;
+        /* padding-top: 4px; */
+        top: 18px;
+        right: 0;
+    }
+
+    .header-gnbNav-item--mob:after {
+        content: "";
+        display: block;
+        width: 100%;
+        /* height: 50px; */
+        border-bottom: 1px solid #fff;
+        margin: 0 auto;   
+    }
+
+    .header-gnbNav-item--mob:last-child::after {
+        content: none;
+    }
+}

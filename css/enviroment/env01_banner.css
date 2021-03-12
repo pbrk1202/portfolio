@@ -1,0 +1,51 @@
+
+/* env-banner */
+.env-banner-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.env-banner-container {
+    height: 700px;
+    background: url(../../img/bg_comp0101.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.env-banner-content {
+    position: relative;
+    max-width: 1230px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.env-banner-box {
+    position: relative;
+    top: 40%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.env-banner-ttl {
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.env-banner-txt {
+    font-size: 1.1rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .env-banner-container {
+        height: 500px;
+    }
+
+    .env-banner-box {
+        top: 70%
+    }    
+
+}

@@ -1,0 +1,55 @@
+/* popup */
+.pop-wrapper {
+    /* display: none; */
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    width: 700px;
+    padding: 15px;
+    border: 10px solid #2d5b79;
+    background: #fff;
+    box-sizing: 3px 3px 10px rgba(0,0,0,0.4);
+    z-index: 102;
+}
+.pop-wrapper.is_active {
+    display: none;
+}
+
+.pop-ttl {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2d5b79;
+    padding: 10px 0;
+}
+.pop-txt {
+    color: #333;
+    text-decoration: none;
+}
+.pop-close {
+    position:absolute;
+    right:20px;
+    top:20px;
+    width: 32px;
+    height: 32px;
+    background: url(../img/icon/close.png) no-repeat;
+    padding:1px 6px;
+    color:#fff;    
+}
+
+/* 글씨 숨김 */
+.is_hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .pop-wrapper {
+        display: none;
+    }
+}

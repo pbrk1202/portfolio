@@ -1,0 +1,42 @@
+
+    <div class="banner-wrapper">
+        <!-- <div class="bl_banner"> -->
+        <div class="swiper-container slide_01">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../img/bg_main02.jpg" alt="배너사진 01"></div>
+                <div class="swiper-slide"><img src="../img/bg_main02.jpg" alt="배너사진 02"></div>
+                <div class="swiper-slide"><img src="../img/bg_main02.jpg" alt="배너사진 03"></div>
+                <div class="swiper-slide"><img src="../img/bg_main02.jpg" alt="배너사진 04"></div>
+                <div class="swiper-slide"><img src="../img/bg_main02.jpg" alt="배너사진 05"></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="next"></div>
+            <div class="prev"></div>
+        </div>
+        <!-- /.slide_01 -->
+    </div>
+    <!-- /.bl_banner -->
+    
+    <script>
+
+        $(document).ready(function(){    
+
+            var swiper = new Swiper('.slide_01', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                },
+                navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+                },
+            });    
+            
+        });
+
+    </script>

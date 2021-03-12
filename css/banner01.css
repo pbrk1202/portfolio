@@ -1,0 +1,97 @@
+
+/* banner-wrapper */
+.banner-wrapper {
+    /* 전체 구조 */
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* slide_01 */
+.slide_01 .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    width: 1230px;
+    transform: translateX(-50%);
+}
+.slide_01 .prev {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 82px;
+    right: auto;
+    width: 30px;
+    height: 50px;
+    color: transparent;
+    background: url(../img/icon/icon_left.png) no-repeat;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.slide_01 .next {
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left: auto;
+    right: 82px;
+    width:30px;
+    height:50px;
+    color: transparent;
+    background: url(../img/icon/icon_right.png) no-repeat;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* swiper */
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; 
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-property: transform; 
+    box-sizing: content-box; 
+    z-index: 1;
+}
+.swiper-slide {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .banner-wrapper { 
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 이미지 크기 고정 */
+    .swiper-slide > img {
+        /* max-width: 1200px; */
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .slide_01 .prev,
+    .slide_01 .next {
+        display: none;
+    }
+
+    .swiper-slide > img {
+       height: 400px;
+    }
+}

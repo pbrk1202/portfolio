@@ -3,81 +3,73 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Portfolio</title>
-    
+    <title>PBRK 포트폴리오</title>
+
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
     <!-- reset -->
     <link rel='stylesheet' type='text/css' media='screen' href='css/reset.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/index.css'>
 
-    <!-- header -->
-    <link rel='stylesheet' type='text/css' media='screen' href='css/header_index.css'>
-    
     <!-- slide -->
-    <link rel='stylesheet' type='text/css' media='screen' href='css/banner_model.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/swiper_model.css'>
 
-    <!-- section -->
-    <link rel='stylesheet' type='text/css' media='screen' href='css/product_icon_model.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/magazine_model.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/popup01.css'>
 
-    <link rel='stylesheet' type='text/css' media='screen' href='css/media_model.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/card_model.css'>
+    <!-- header -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/header.css'>
+
+    <!-- section -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/banner01.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/product01.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/magazine01.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/media01.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/card01.css'>
+
 
     <!-- footer -->
-    <link rel='stylesheet' type='text/css' media='screen' href='css/footer_index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/footer.css'>
 </head>
 <body>
-    
+
     <!-- header -->
-    <!-- z-index / inner : 101; bg : 101 -->    
-    <header role="header" data-include="header_index.html"></header> 
+    <header role="header" data-include="header.html"></header>
 
     <!-- section -->
-    <section role="banner" data-include="banner_model.html"></section>
-    <section role="product_icon" data-include="product_icon_model.html"></section>    
-    <section role="magazine" data-include="magazine_model.html"></section>
-
-    <section role="media" data-include="media_model.html"></section>
-    <!-- z-index / ly_cont : 99 -->
-    <section role="section" data-include="card_model.html"></section> 
+    <section role="banner" data-include="banner01.html"></section>
+    <section role="product" data-include="product01.html"></section>
+    <section role="magazine" data-include="magazine01.html"></section>
+    <section role="media" data-include="media01.html"></section>
+    <section role="card" data-include="card01.html"></section>
 
     <!-- footer -->
-    <footer role="footer" data-include="footer_index.html"></footer> 
+    <footer role="footer" data-include="footer.html"></footer>
 
-    <div class="bl_popup_layer">
-        <h3 class="bl_popup_ttl">공지사항</h3>
-        <p class="bl_popup_txt">포트폴리오에만 사용하는 개인적인 사이트 입니다.</p>
-        <p class="bl_popup_txt">해당 사이트는 반응형으로 제작되었고, 서브페이지 업데이트 중입니다.</p><br>
-        <a class="bl_popup_txt" href="https://github.com/pbrk1202/portfolio">깃허브 : https://github.com/pbrk1202/portfolio</a>
-        <div class="bl_popup_close"><span class="el_hidden">닫기</span></div>
-    </div>
+    <!-- popup -->
+    <div role="popup" data-include="popup01.html"></div>
 
     <!-- script -->
     <script src="js/jquery.min_1.12.4.js"></script>
-    <script src="js/plugin/swiper.js"></script> 
+    <script src="js/swiper.js"></script>
 
     <script>
-        $(function(){ 
-            includeLayout(); 
-        }); 
 
-        function includeLayout(){ 
-            var includeArea = $('[data-include]'); 
-            var self, url; 
-            $.each(includeArea, function() { 
-                self = $(this); 
-                url = self.data("include"); 
-                self.load(url, function() { 
-                    self.removeAttr("data-include"); 
-                }); 
-            }); 
+        //include
+        $(function(){ 
+            includeLayout();
+        });
+
+        function includeLayout(){
+            var includeArea = $('[data-include]');
+            var self, url;
+            $.each(includeArea, function() {
+                self = $(this);
+                url = self.data("include");
+                self.load(url, function() {
+                    self.removeAttr("data-include");
+                });
+            });
         }
 
-        var popupClose = $('.bl_popup_close');
-        popupClose.click(function(){
-            $('.bl_popup_layer').addClass('is_active');
-        });
     </script>
 </body>
 </html>

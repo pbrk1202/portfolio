@@ -1,30 +1,29 @@
 
-/* pager*/
-.bl_pager {
+/* pager-model-wrapper*/
+.pager-model-wrapper {
     max-width: 1230px;
     margin-right: auto;
     margin-left: auto;
     padding: 55px 15px;
 }
 
-/* page */
-.bl_pager_box {
+.pager-model-content {
     display: flex;
     overflow-x: auto;
 }
-.bl_pager_inner {
+.pager-model-list {
     display:flex;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
 }
-.bl_pager_inner > *:last-child {
+.pager-model-list > *:last-child {
     margin-right: 0;
 }
-.bl_pager_inner > li {
+.pager-model-list > li {
     margin-right: 15px;
 }
-.bl_pager_link {
+.pager-model-link {
     display: flex;
     width: 40px;
     height: 40px;
@@ -36,13 +35,13 @@
     justify-content: center;
     transition: .25s;
 }
-.bl_pager_link:focus,
-.bl_pager_link:hover {
+.pager-model-link:focus,
+.pager-model-link:hover {
     color: #2d5b79;
     background-color: #ddd;
     opacity: .75;
 }
-.bl_pager_link.is_active {
+.pager-model-link.is_active {
     color: #2d5b79;
     background-color: #ddd;
     pointer-events: none;
