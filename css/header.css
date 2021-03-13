@@ -220,11 +220,13 @@
         color: #fff;
     } 
 
-    .header-gnbNav-item--mob > span {
+    .header-gnbNav-item--mob > a {
         margin: 15px 0;
+        color: #fff;
+        text-decoration: none;;
     }
 
-    .header-gnbNav-item--mob > span > img {
+    .header-gnbNav-item--mob > a > img {
         position: relative;
         /* padding-top: 4px; */
         top: 18px;
